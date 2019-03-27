@@ -68,7 +68,7 @@ def Dijkstra(data, orig, dest):
     #populate dictionary: {out1={in1:d1. in2:d2, ...}, out2={...}, ...}
     for d in data:
         Q[d[0]][d[1]]=int(d[2]) # neigbours all a dictionary of distances
-    dist={n:1e42 for n in Q} # set initial distances to origin from nodes to far away
+    dist={n:float("inf") for n in Q} # set initial distances to origin from nodes to far away
     prev={n:None for n in Q} # all nodes intially have no previous node on min route
         
     u = orig
